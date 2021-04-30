@@ -1,0 +1,23 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+img {
+  height: 3rem;
+  padding-left: 1rem;
+}
+
+.header {
+  justify-content: center;
+  height: 10%;
+}
+
+span {
+  display: flex;
+  align-items: center;
+  
+}
+
+h1 {
+  padding-left: 1rem;
+}
