@@ -6,8 +6,34 @@
 .title {
     text-align: left;
     margin-bottom: 1rem;
+
+}
+
+.nova-categoria {
+    margin-bottom: 0.6rem;
+    background-color: rgb(49, 187, 49);
 }
 
 .table {
     width: 100%;
 }
+
+.livros {
+    color: rgb(42, 81, 209);
+    margin-left: 0.6rem;
+}
+
+.edit {
+color: rgb(212, 180, 37);
+}
+
+.delete {
+    color: red;
+    margin-left: 0.6rem;
+}
+
+.mat-header {
+    width: 4rem;
+}
+
+
