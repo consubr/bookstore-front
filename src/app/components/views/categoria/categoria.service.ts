@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { AnimationDurations } from '@angular/material/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -20,9 +19,19 @@ export class CategoriaService {
     return this.http.get<Categoria[]>(url)
    }
 
+   findById(id: String):Observable<Categoria> {
+    const url = `${this.baseUrl}/categorias/${id}`
+    return this.http.get<Categoria>(url)
+   }
+
    create(categoria: Categoria):Observable<Categoria> {
     const url = `${this.baseUrl}/categorias`
     return this.http.post<Categoria>(url, categoria)
+   }
+
+   delete(id: String):Observable<Categoria> {
+    const url = `${this.baseUrl}/categorias/${id}`
+    return this.http.delete<Categoria>(url)
    }
 
    mensagem(str: String): void {
