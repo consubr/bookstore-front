@@ -39,7 +39,6 @@ export class CategoriaUpdateComponent implements OnInit {
       }
     })
   }
-
   
   cancelar(): void {
        this.router.navigate(["categorias"])

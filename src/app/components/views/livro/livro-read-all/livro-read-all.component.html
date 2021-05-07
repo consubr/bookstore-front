@@ -1,0 +1,49 @@
+<div class="content">
+    <div class="title">
+    </div>
+  
+    <button class="novo-livro"  mat-raised-button color="primary"> NOVO LIVRO </button>
+  
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="livros" class="table">
+        <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+  
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>ID</th>
+          <td mat-cell *matCellDef="let row">{{ row.id }}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="titulo">
+          <th mat-header-cell *matHeaderCellDef>TÍTULO</th>
+          <td mat-cell *matCellDef="let row">{{ row.titulo }}</td>
+        </ng-container>
+  
+         <ng-container matColumnDef="livros">
+          <th class="mat-header" mat-header-cell *matHeaderCellDef>LER LIVRO</th>
+          <td mat-cell *matCellDef="let row">
+            <a  class="livros">
+              <i class="material-icons">book</i>
+            </a>
+          </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="acoes">
+          <th class="mat-header" mat-header-cell *matHeaderCellDef>AÇÕES</th>
+          <td mat-cell *matCellDef="let row">
+            <a routerLink="update/{{row.id}}" class="edit">
+              <i class="material-icons">edit</i>
+            </a>
+  
+            <a routerLink="delete/{{row.id}}" class="delete">
+              <i class="material-icons">delete</i>
+            </a>
+          </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
+  </div>
+  
