@@ -1,0 +1,28 @@
+
+<form> ~
+    <h1>CRIANDO NOVO LIVRO</h1>
+
+    <mat-form-field class="form">
+        <mat-label>Titulo</mat-label>
+        <input matInput [formControl]="titulo" required  [(ngModel)]="livro.titulo" type="text" name="titulo" maxlength="100" />
+        <mat-error *ngIf="titulo.invalid"> {{ getMessage() }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Nome Autor</mat-label>
+        <input matInput [formControl]="nome_autor" required  [(ngModel)]="livro.nome_autor" type="text" name="nome_autor"  placeholder="Ex. Dave Fernandes" maxlength="100"/>
+        <mat-error *ngIf="nome_autor.invalid"> NOME DO AUTOR deve ter entre 3 e 100 caracteres </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Texto</mat-label>
+        <textarea matInput [formControl]="texto" required [(ngModel)]="livro.texto" type="text" name="texto" maxlength="2000000" ></textarea>     
+        <mat-error *ngIf="texto.invalid"> TEXTO deve ter entre 10 e 2.000.000 caracteres </mat-error>
+
+    </mat-form-field>    
+
+    <div class="buttons">
+        <button  [disabled]="getMessage()"  (click)="create()" class="mat-elevation-z8" mat-raised-button color="primary">SALVAR</button>
+        <button (click)="cancel()" class="mat-elevation-z8" mat-raised-button color="warn">CANCELAR</button>
+    </div>
+</form>

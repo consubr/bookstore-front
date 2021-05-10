@@ -30,8 +30,8 @@ export class LivroService {
     return this.http.get<Livro>(url)
    }
 
-   create(livro: Livro):Observable<Livro> {
-    const url = `${this.baseUrl}/livros`
+   create(livro: Livro, id_cat: String):Observable<Livro> {
+    const url = `${this.baseUrl}/livros/p?categoria=${id_cat}`
     return this.http.post<Livro>(url, livro)
    }
 

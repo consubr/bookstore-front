@@ -2,7 +2,7 @@
     <div class="title">
     </div>
   
-    <button class="novo-livro"  mat-raised-button color="primary"> NOVO LIVRO </button>
+    <button class="novo-livro" (click)="navToLivroCreate()"  mat-raised-button color="primary"> NOVO LIVRO </button>
   
     <div class="mat-elevation-z8">
       <table mat-table [dataSource]="livros" class="table">
