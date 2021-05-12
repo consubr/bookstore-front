@@ -45,7 +45,7 @@ export class LivroCreateComponent implements OnInit {
   }
  
   cancel() {
-    this.router.navigate([`categorias`])
+    this.router.navigate([`categorias/${this.id_cat}/livros`])
   }
 
   getMessage() {
