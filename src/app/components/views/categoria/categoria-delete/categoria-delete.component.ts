@@ -29,9 +29,6 @@ export class CategoriaDeleteComponent implements OnInit {
   findById() {
     this.service.findById(this.categoria.id!).subscribe((resposta) => {
       this.categoria = resposta
-      //this.categoria.nome = resposta.nome
-      //this.categoria.descricao = resposta.descricao
-      //console.log(resposta)
     })
   }
 
