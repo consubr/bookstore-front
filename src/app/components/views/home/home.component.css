@@ -1,16 +1,30 @@
 .home {
-  width: 95%;  
-  margin: 1rem auto;
-  }
+    width: 95%;
+    text-align: center;
+    margin: 1rem auto;
+}
 
-  @media(max-width: 450px){
+@media(max-width: 450px) {
     .home {
-      width: 70%;
+        width: 70%;
     }
-  }
+    .subtitle {
+        color: black;
+        font-size: 5pt;
+    }
+}
 
-  @media(max-width: 770px){
+@media(max-width: 770px) {
     .home {
-      width: 90%;
+        width: 90%;
     }
-  }
+    .subtitle {
+        color: black;
+        font-size: 10pt;
+    }
+}
+
+.subtitle {
+    color: black;
+    font-size: 15pt;
+}
